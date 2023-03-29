@@ -53,6 +53,8 @@ public class SortingProject {
 		System.out.println("The time taken is:" + total + " nanoseconds");
                 System.out.println("Sorted:");
 		displayArray(test);
+                System.out.println("Comparisons: " + Sorts.getComparisons());
+                System.out.println("Switches: " + Sorts.getSwitches());
 		/* search for number in sorted array */
 		System.out.print("Enter a number to search for: ");
 		searchNum = input.nextInt();
