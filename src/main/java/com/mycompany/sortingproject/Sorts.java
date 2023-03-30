@@ -9,11 +9,12 @@ import java.util.Random;
 
 public class Sorts {
  	
-	    //class variables
+    //class variables
     private static int comparisons = 0;
     private static int switches = 0;
+       
     
-    //setters and getters
+    //setters and getters for counters
     public static int getComparisons(){
         return comparisons;
     }
@@ -48,7 +49,8 @@ public class Sorts {
      * @param order 1 means accending, 0 means decending
      */
     public static void quicksort(int[] arr, int lowInd, int highInd, int order) {
-        
+                
+                
         //makes sure that if your algorithm is tyrying to sort a single number it will just quit here since it is already in order
     if (lowInd >= highInd) {
         comparisons++;//CHECKS
@@ -92,7 +94,6 @@ public class Sorts {
 
     //stops running once the two pointers have reached eachother
     while (lp < rp) {
-        comparisons++;//CHECKS
         
       // lp works right through the array until it finds a number greater than the pivot number, or reaches the right pointer.
       while (arr[lp] <= pivot && lp < rp) {

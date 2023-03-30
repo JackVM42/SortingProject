@@ -37,24 +37,26 @@ public class SortingProject {
 		/* populate array */
 		test = new int[numItems];
 		for (int i = 0; i < test.length; i++) {
-			test[i] = rand.nextInt(100);
+			test[i] = rand.nextInt(10);
 		}
 		System.out.println("Unsorted:");
-		displayArray(test);
-		start = System.nanoTime();
+		Sorts.printArray(test);
+   
+                start = System.nanoTime();
                 Sorts.quicksort(test);
                 finish = System.nanoTime();
                 total = finish - start;
+                
 		
 		
-		
-//		System.out.println("Sorted:");
-//		displayArray(test);
-		System.out.println("The time taken is:" + total + " nanoseconds");
-                System.out.println("Sorted:");
-		displayArray(test);
+                System.out.println("\nSorted:");
+		Sorts.printArray(test);
+                System.out.println("\nThe time taken is:" + total + " nanoseconds");
                 System.out.println("Comparisons: " + Sorts.getComparisons());
                 System.out.println("Switches: " + Sorts.getSwitches());
+                System.out.println("\nReversed: ");
+                Sorts.revQuicksort(test);
+                Sorts.printArray(test);
 		/* search for number in sorted array */
 		System.out.print("Enter a number to search for: ");
 		searchNum = input.nextInt();
