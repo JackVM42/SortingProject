@@ -58,7 +58,7 @@ public class SortingProject {
                 Sorts.revQuicksort(test);
                 Sorts.printArray(test);
 		/* search for number in sorted array */
-		System.out.print("Enter a number to search for: ");
+		System.out.print("\nEnter a number to search for: ");
 		searchNum = input.nextInt();
 		while (searchNum != -1){
                         start = currentTimeMillis();
